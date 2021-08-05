@@ -1,0 +1,28 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    name: prometheus-blackbox-exporter
+    k8s-app: prometheus-blackbox-exporter
+  name: prometheus-blackbox-exporter
+  namespace: monitoring
+spec:
+  endpoints:
+    - interval: 1s
+      path: /probe
+      port: http
+      params:
+        module:
+        - http_2xx
+        target:
+        - "helloservice.demospace.svc.cluster.local:9000"
+      metricRelabelings:
+      - action: replace
+        regex: (.*)
+        replacement: my_local_service
+        sourceLabels:
+        - __param_target
+        targetLabel: target
+  selector:
+    matchLabels:
+      app: prometheus-blackbox-exporter
