@@ -1,8 +1,8 @@
 ## Litmus 2.x resources for "Configuring Kubernetes for Reliability with LitmusChaos"
 
 This repo consists of resources that were used while carrying out the Litmus 2.x demonstration 
-in this [video tutorial](https://www.youtube.com/watch?v=zu-hUJ_myVw). They are referenced as part 
-of instructions to replicate the demo environment. Also provided are some basic details about the 
+in this [video tutorial](https://www.youtube.com/watch?v=zu-hUJ_myVw). It is a part of Udemy course [Configuring Kubernetes for Reliability with LitmusChaos](https://www.udemy.com/course/configuring-kubernetes-for-reliability-with-litmuschaos/). 
+They are referenced as part of instructions to replicate the demo environment. Also provided are some basic details about the 
 **bank-of-anthos** & **podtato-kill-with-http-probe** chaos workflows described therein. 
 
 ## Prerequisites
@@ -83,5 +83,5 @@ could involve the inclusion of middleware that can re-route request to replicas 
 ## Conclusion 
 
 To learn more about LitmusChaos 2.x, refer to the [documentation](https://litmusdocs-beta.netlify.app/docs/next/introduction/what-is-litmus). 
-
+Have a look at the Udemy course [Configuring Kubernetes for Reliability with LitmusChaos](https://www.udemy.com/course/configuring-kubernetes-for-reliability-with-litmuschaos/).
 
